@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid{
+  background: url(im/5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: sans-serif;
+}
+body{
+  background-color:#1C2833;
+}
+.bi{
+color:rgb(202, 38, 38);
+margin: 0 .9vw 0 0;
+
+
+}
+
+h1{
+  color: rgb(202, 38, 38);
+  margin: 3vw;
+}
+h3{
+  color: white;
+  margin: 3vw;
+
+}
+ul {
+  list-style-type: none;
+  color: white;
+  margin: 3vw;
+}
+li{
+  padding: 1vw;
+}
+li:before {
+  content: "\2964";
+  margin-right: 6px;
+ 
+}
+
+
+.m-2{
+  font-size: 3vw;
+  color: red;
+  
+}
+
+
+
+.container {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+  grid-gap: 20px;
+}
+p{
+  color:white;
+  margin: 2vw;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+text-decoration: underline;
+}
+
+ 
+
+
+
+
