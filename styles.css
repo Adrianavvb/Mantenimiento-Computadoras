@@ -1,39 +1,39 @@
-/* Fondo general del header */
+/* Fondo con imagen en el header */
 header {
-  background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+  background: url('im/header-bg.jpg') center center / cover no-repeat;
   padding-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Íconos de soporte e idioma */
+/* Íconos superiores */
 header .container-fluid a {
-  color: #333;
+  color: #f0f0f0;
   font-size: 1.4rem;
   transition: color 0.3s ease;
 }
 
 header .container-fluid a:hover {
-  color: #007bff;
+  color: #0dcaf0;
 }
 
 /* Título principal */
 header h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a1a1a;
   margin-bottom: 0.3rem;
 }
 
 /* Subtítulo */
 header .lead {
   font-size: 1.2rem;
-  color: #444;
   font-weight: 500;
 }
 
-/* Barra de navegación */
+/* Barra de navegación con sombra */
 nav {
   background-color: #212529;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
@@ -48,7 +48,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Responsive: móviles */
+/* Responsive */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
@@ -59,10 +59,5 @@ nav a:hover {
   nav a {
     display: block;
     margin: 5px 0;
-  }
-}
-
-  form button {
-    width: 100%;
   }
 }
