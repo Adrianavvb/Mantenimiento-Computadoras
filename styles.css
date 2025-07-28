@@ -5,100 +5,188 @@
   box-sizing: border-box;
 }
 
-/* Estilos generales */
+/* =======================
+   Estilos Globales
+========================= */
+
 body {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
   color: #333;
 }
 
-/* Encabezado */
-header {
-  background-color: #0d6efd;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+h1, h2, h3 {
+  color: #1c1c1c;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2rem;
-}
-
-/* Secciones principales */
-main {
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-h2 {
-  color: #0d6efd;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li::before {
-  content: "✔️";
-  margin-right: 10px;
-  color: green;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-/* Enlaces */
 a {
-  color: #0d6efd;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #0d6efd;
 }
 
-/* Pie de página */
-footer {
-  background-color: #222;
-  color: white;
+/* =======================
+   Header y Navegación
+========================= */
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+nav.bg-dark a {
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+}
+
+nav.bg-dark a:hover {
+  color: #ffc107;
+}
+
+/* =======================
+   Secciones
+========================= */
+
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+section h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
   text-align: center;
-  padding: 20px;
 }
 
-/* Responsividad */
+/* =======================
+   Galería
+========================= */
+
+#galeria .img-fluid {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+#galeria .img-fluid:hover {
+  transform: scale(1.05);
+}
+
+/* =======================
+   Ubicación
+========================= */
+
+#ubicacion iframe {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* =======================
+   Formulario de contacto
+========================= */
+
+form label {
+  font-weight: 500;
+}
+
+form .form-control {
+  border-radius: 0.3rem;
+}
+
+form button {
+  background-color: #0d6efd;
+  border: none;
+}
+
+form button:hover {
+  background-color: #0b5ed7;
+}
+
+/* =======================
+   Blog y Testimonios
+========================= */
+
+#blog h3 {
+  font-size: 1.3rem;
+  color: #0d6efd;
+}
+
+blockquote {
+  background-color: #f1f1f1;
+  border-left: 5px solid #0d6efd;
+  padding: 1rem 1.2rem;
+  border-radius: 0.5rem;
+}
+
+/* =======================
+   FAQ
+========================= */
+
+.accordion-button:not(.collapsed) {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+/* =======================
+   Footer
+========================= */
+
+footer {
+  background-color: #212529;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #adb5bd;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* =======================
+   Responsive Design
+========================= */
+
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
+  header .container-fluid {
+    justify-content: center;
   }
 
-  h2 {
+  nav.bg-dark .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #galeria .img-fluid {
+    height: auto;
+  }
+
+  iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  section h2 {
     font-size: 1.5rem;
   }
 
-  main {
-    padding: 15px;
+  #galeria .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
-  ul li {
-    font-size: 1rem;
-  }
-
-  header p, footer p {
-    font-size: 1rem;
+  .blockquote {
+    font-size: 0.95rem;
   }
 }
