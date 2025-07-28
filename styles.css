@@ -1,218 +1,66 @@
-/* =======================
-   Reset básico
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* =======================
-   Estilos Globales
-========================= */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-  scroll-behavior: smooth;
-}
-
-h1, h2, h3 {
-  color: #1c1c1c;
-  font-weight: 700;
-}
-
-a {
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-  color: #0d6efd;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0.4rem;
-}
-
-/* =======================
-   Header y Navegación
-========================= */
+/* Fondo general del header */
 header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+  padding-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-nav.bg-dark a {
-  font-weight: 500;
-  padding: 0.5rem 0.8rem;
-  display: inline-block;
+/* Íconos de soporte e idioma */
+header .container-fluid a {
+  color: #333;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
 }
 
-nav.bg-dark a:hover {
-  color: #ffc107;
+header .container-fluid a:hover {
+  color: #007bff;
 }
 
-/* =======================
-   Secciones
-========================= */
-section {
-  padding: 3rem 0;
+/* Título principal */
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
 }
 
-section h2 {
-  margin-bottom: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  color: #0d6efd;
-}
-
-/* =======================
-   Galería
-========================= */
-#galeria .img-fluid {
-  height: 220px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-#galeria .img-fluid:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-/* =======================
-   Sobre Nosotros
-========================= */
-#nosotros p {
-  margin-bottom: 1rem;
-}
-
-/* =======================
-   Ubicación
-========================= */
-#ubicacion iframe {
-  border-radius: 0.5rem;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  width: 100%;
-  height: 300px;
-  border: none;
-}
-
-/* =======================
-   Formulario de contacto
-========================= */
-form label {
+/* Subtítulo */
+header .lead {
+  font-size: 1.2rem;
+  color: #444;
   font-weight: 500;
 }
 
-form .form-control {
-  border-radius: 0.3rem;
-  margin-bottom: 1rem;
-}
-
-form button {
-  background-color: #0d6efd;
-  border: none;
-  padding: 0.5rem 1.2rem;
-  border-radius: 0.3rem;
-  color: white;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #0b5ed7;
-}
-
-/* =======================
-   Blog y Testimonios
-========================= */
-#blog h3 {
-  font-size: 1.3rem;
-  color: #0d6efd;
-}
-
-blockquote {
-  background-color: #f1f1f1;
-  border-left: 5px solid #0d6efd;
-  padding: 1rem 1.2rem;
-  border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-}
-
-/* =======================
-   Preguntas Frecuentes
-========================= */
-.accordion-button:not(.collapsed) {
-  background-color: #0d6efd;
-  color: #fff;
-}
-
-.accordion-button::after {
-  filter: invert(1);
-}
-
-/* =======================
-   Footer
-========================= */
-footer {
+/* Barra de navegación */
+nav {
   background-color: #212529;
-  color: #fff;
-  font-size: 0.9rem;
-  padding: 2rem 0;
 }
 
-footer a {
-  color: #adb5bd;
-  transition: color 0.3s;
+nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
-footer a:hover {
-  color: #fff;
+nav a:hover {
+  color: #0dcaf0;
+  text-decoration: underline;
 }
 
-/* =======================
-   Responsive Design
-========================= */
+/* Responsive: móviles */
 @media (max-width: 768px) {
-  header .container-fluid {
-    justify-content: center;
+  header h1 {
+    font-size: 2rem;
   }
-
-  nav.bg-dark .container {
-    flex-direction: column;
-    text-align: center;
+  header .lead {
+    font-size: 1rem;
   }
-
-  #galeria .img-fluid {
-    height: auto;
-  }
-
-  iframe {
-    height: 200px;
-  }
-
-  section h2 {
-    font-size: 1.6rem;
+  nav a {
+    display: block;
+    margin: 5px 0;
   }
 }
-
-@media (max-width: 576px) {
-  #galeria .col-md-4 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  blockquote {
-    font-size: 0.95rem;
-  }
 
   form button {
     width: 100%;
